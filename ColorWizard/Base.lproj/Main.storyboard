@@ -15,19 +15,16 @@
         </array>
     </customFonts>
     <scenes>
-        <!--ColorWizard-->
+        <!--Color Wizard-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="ColorWizard" id="BYZ-38-t0r" customClass="ViewController" customModule="ColorWizard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ColorPresenterVC" customModule="ColorWizard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grey is boring. Choose a color !!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VHs-4R-IUh">
-                                <rect key="frame" x="87.5" y="301" width="200" height="66"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="CDR-ID-f2U"/>
-                                </constraints>
+                                <rect key="frame" x="9.5" y="317.5" width="356" height="33"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -48,15 +45,18 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="colorName" destination="VHs-4R-IUh" id="yr7-cb-PNG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="534" y="133"/>
         </scene>
-        <!--View Controller-->
+        <!--Color PickerVC-->
         <scene sceneID="0bg-La-JVp">
             <objects>
-                <viewController id="gPn-Wu-RxL" sceneMemberID="viewController">
+                <viewController id="gPn-Wu-RxL" customClass="ColorPickerVC" customModule="ColorWizard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xYl-GJ-Kiv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,6 +71,9 @@
                                         <state key="normal" title="Green">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="colorBtnWasPressedWithSender:" destination="gPn-Wu-RxL" eventType="touchUpInside" id="8eL-n6-Cpd"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k11-Da-QUC">
                                         <rect key="frame" x="0.0" y="120.5" width="375" height="120.5"/>
@@ -79,6 +82,9 @@
                                         <state key="normal" title="Yellow">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="colorBtnWasPressedWithSender:" destination="gPn-Wu-RxL" eventType="touchUpInside" id="qAr-ev-Nvb"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nRz-qd-IyG">
                                         <rect key="frame" x="0.0" y="241" width="375" height="121"/>
@@ -87,6 +93,9 @@
                                         <state key="normal" title="Blue">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="colorBtnWasPressedWithSender:" destination="gPn-Wu-RxL" eventType="touchUpInside" id="XNx-uO-afy"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9y-Tk-PG0">
                                         <rect key="frame" x="0.0" y="362" width="375" height="120.5"/>
@@ -95,6 +104,9 @@
                                         <state key="normal" title="Red">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="colorBtnWasPressedWithSender:" destination="gPn-Wu-RxL" eventType="touchUpInside" id="xch-cx-QG3"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3v0-aG-Yx7">
                                         <rect key="frame" x="0.0" y="482.5" width="375" height="120.5"/>
@@ -103,6 +115,9 @@
                                         <state key="normal" title="Pink">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="colorBtnWasPressedWithSender:" destination="gPn-Wu-RxL" eventType="touchUpInside" id="ehf-C1-XPJ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
