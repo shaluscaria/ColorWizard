@@ -32,8 +32,8 @@
                         </subviews>
                         <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="VHs-4R-IUh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DX7-WW-sOC"/>
-                            <constraint firstItem="VHs-4R-IUh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zwR-J7-kro"/>
+                            <constraint firstItem="VHs-4R-IUh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="EzZ-dd-9U1"/>
+                            <constraint firstItem="VHs-4R-IUh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kGv-O4-YTs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
