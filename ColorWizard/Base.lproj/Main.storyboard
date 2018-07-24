@@ -41,7 +41,7 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="Wv1-XT-tEY"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Wem-5N-37s">
                             <connections>
-                                <segue destination="gPn-Wu-RxL" kind="show" id="Pq4-9m-b9s"/>
+                                <segue destination="gPn-Wu-RxL" kind="show" identifier="presenterColorPickerVC" id="Pq4-9m-b9s"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
